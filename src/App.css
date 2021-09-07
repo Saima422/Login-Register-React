@@ -1,5 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi:wght@500&display=swap');
+
 .App {
   text-align: center;
+  box-sizing: border-box;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  /* margin-top: 100px; */
+  /* min-height: 100vh; */
+}
+
+.appContainer{
+  font-family: 'Kaisei HarunoUmi', serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #3C9AE2;
+  /* flex-wrap: wrap; */
+  /* min-height: 100vh; */
 }
 
 .App-logo {
