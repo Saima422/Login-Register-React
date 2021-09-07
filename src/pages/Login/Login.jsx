@@ -35,8 +35,10 @@ function Login(){
                 event.target.form.password.value = "";
                 alert(resData.message);
                 setToken(resData.token); 
-                setLogin(true);
-                setRedirect(true);       
+                if(token){
+                    setLogin(true);
+                    setRedirect(true); 
+                }    
             }
 
         }catch(err){
