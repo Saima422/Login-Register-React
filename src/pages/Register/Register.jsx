@@ -5,19 +5,47 @@ import { Redirect, Route } from 'react-router';
 
 function Register(){
     const [redirect, setRedirect] = useState(false);
+    const [firstname, setFirstname] = useState('');
+    const [lastname, setLastname] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
 
     // const url = 'http://localhost:4000/users/register';
     const url = 'https://todo-backend-multi-user.herokuapp.com/users/register';
+
+
+    const handleChange = (event) => {
+        switch(event.target.name){
+            case 'firstname':
+                setFirstname(event.target.value);
+                break;
+            case 'lastname':
+                setLastname(event.target.value);
+                break;
+            case 'email':
+                setEmail(event.target.value);
+                break;
+            case 'password':
+                setPassword(event.target.value);
+                break;
+            case 'confirmPassword':
+                setConfirmPassword(event.target.value);
+                break;
+            default:
+                break;
+        }
+    }
 
     const registerUser = async (event) => {
         event.preventDefault();
         
         const reqObj = {
-            firstname: event.target.form.firstname.value,
-            lastname: event.target.form.lastname.value,
-            email: event.target.form.email.value,
-            password: event.target.form.password.value,
-            confirmPassword: event.target.form.confirmPassword.value,
+            firstname: firstname,
+            lastname: lastname,
+            email: email,
+            password: password,
+            confirmPassword: confirmPassword,
         }
 
         try{
@@ -28,34 +56,33 @@ function Register(){
             });
     
             resData = await resData.json();
-            console.log(resData);
 
             if(resData && resData.data){
-                event.target.form.firstname.value =
-                event.target.form.lastname.value =
-                event.target.form.email.value =
-                event.target.form.password.value = 
-                event.target.form.confirmPassword.value = "";
+                event.target.firstname.value =
+                event.target.lastname.value =
+                event.target.email.value =
+                event.target.password.value = 
+                event.target.confirmPassword.value = "";
                 alert("User Created Successfully");
                 setRedirect(true);
             }
             else{
-                event.target.form.firstname.value =
-                event.target.form.lastname.value =
-                event.target.form.email.value =
-                event.target.form.password.value = 
-                event.target.form.confirmPassword.value = "";
+                event.target.firstname.value =
+                event.target.lastname.value =
+                event.target.email.value =
+                event.target.password.value = 
+                event.target.confirmPassword.value = "";
                 alert("User Could not be created");
                 setRedirect(false);
             }
             
         }catch(err){
             console.log(err);
-            event.target.form.firstname.value =
-            event.target.form.lastname.value =
-            event.target.form.email.value =
-            event.target.form.password.value = 
-            event.target.form.confirmPassword.value = "";
+            event.target.firstname.value =
+            event.target.lastname.value =
+            event.target.email.value =
+            event.target.password.value = 
+            event.target.confirmPassword.value = "";
             alert("User Could not be Created. Try Again!!");
         }
     }
@@ -65,24 +92,24 @@ function Register(){
         { redirect ?
             <Redirect to="/login" />
             :
-            <form className={styles.registerForm}>
+            <form className={styles.registerForm} onSubmit={registerUser}>
                 <h1>REGISTER</h1>
                 <label htmlFor="firstname">First Name </label>
-                <input id="firstname" type="text" />
+                <input id="firstname" type="text" name="firstname" onChange={handleChange} required/>
 
                 <label htmlFor="lastname">Last Name </label>
-                <input id="lastname" type="text" />
+                <input id="lastname" type="text" name="lastname" onChange={handleChange}required/>
 
                 <label htmlFor="email">Email </label>
-                <input id="email" type="email" />
+                <input id="email" type="email" name="email" onChange={handleChange} required/>
 
                 <label htmlFor="password">Password </label>
-                <input id="password" type="password" />
+                <input id="password" type="password" name="password" onChange={handleChange} autoComplete="on" required minLength="8"/>
 
                 <label htmlFor="confirmPassword">Confirm Password </label>
-                <input id="confirmPassword" type="password" />
+                <input id="confirmPassword" type="password" name="confirmPassword" onChange={handleChange} autoComplete="on" required minLength="8"/>
 
-                <button onClick={registerUser}>REGISTER</button>
+                <button type="submit">REGISTER</button>
 
                 <p>Already Registered? <Link to="/login">LOGIN</Link></p>
             </form>
