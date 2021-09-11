@@ -121,7 +121,7 @@ From your command line:
 
 * Author - Saima Sayed 
 * [Connect on LinkedIn](https://www.linkedin.com/in/saima-sayed-6482481b9/)
-* [Project Resources (Frontend))](https://github.com/Saima422/Login-Register-React)
+* [Project Resources](https://github.com/Saima422/Login-Register-React)
 * [Netlify Live Link](https://admiring-perlman-1cdede.netlify.app/)
 
 
