@@ -6,8 +6,6 @@
   position: relative;
   margin: 0;
   padding: 0;
-  /* margin-top: 100px; */
-  /* min-height: 100vh; */
 }
 
 .appContainer{
@@ -17,8 +15,6 @@
   align-items: center;
   height: 100vh;
   background-color: #3C9AE2;
-  /* flex-wrap: wrap; */
-  /* min-height: 100vh; */
 }
 
 button{

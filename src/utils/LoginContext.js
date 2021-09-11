@@ -4,6 +4,7 @@ const LoginContext = React.createContext(false);
 
 function LoginContextProvider(props){
     const [loginValue, setLoginValue] = useState(false);
+
     const { children } = props;
 
     const setLogin = (value) => {
