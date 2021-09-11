@@ -1,73 +1,133 @@
-Links 
-https://admiring-perlman-1cdede.netlify.app/
 
-# Getting Started with Create React App
+# Authentication App
+Authentication App makes API calls to server for Registering new user and Authenticating the already registered users.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
 
-## Available Scripts
+A simple frontend for Authentication Application created with React JS and integrated with a backend which is hosted on heroku. Built with an aim to learn and implement creation of a React Frontend with a given backend. Authentication Application supports functionalities of Register and Login. The application makes API calls to the backend for the same. During the Login the server responds with a JWT token which is then stored in applications state.
 
-In the project directory, you can run:
+## Getting Started
 
-### `npm start`
+These are instructions to set up your project locally.
+To get a local copy up and running follow these simple steps.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Prerequisites
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+To clone and run this application, you'll need [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and [Node.js](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-18-04) (which comes with npm) installed on your computer.
 
-### `npm test`
+### Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+From your command line:
 
-### `npm run build`
+1. Clone the repo
+   ```sh
+   $ git clone https://github.com/Saima422/Login-Register-React.git
+   ```
+2. Install the Dependencies
+   ```sh
+   $ npm install
+   ```
+3. To start the App, use the following command
+    ```sh
+    $ npm run start
+    ```
+4. The React Application is now Up and Running
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Folder Structure
+```
+.
+├── public 
+|    ├── favicon.ico
+|    ├── icon.ico
+|    ├── index.html
+|    ├── logo192.png
+|    ├── logo512.png
+|    └── manifest.json
+├── README.md
+├── src
+|    ├── App.css
+|    ├── App.js
+|    ├── App.test.js
+|    ├── components
+|    │   ├── Footer
+|    │   │   ├── Footer.jsx
+|    │   │   └── Footer.module.scss
+|    │   └── Navigation
+|    │       ├── auth.png
+|    │       ├── Navigation.jsx
+|    │       └── Navigation.module.scss
+|    ├── index.css
+|    ├── index.js
+|    ├── logo.svg
+|    ├── pages
+|    │   ├── Homepage
+|    │   │   ├── Homepage.jsx
+|    │   │   └── Homepage.module.scss
+|    │   ├── LandingPage
+|    │   │   ├── LandingPage.jsx
+|    │   │   └── LandingPage.module.scss
+|    │   ├── Login
+|    │   │   ├── Login.jsx
+|    │   │   └── Login.module.scss
+|    │   └── Register
+|    │       ├── Register.jsx
+|    │       └── Register.module.scss
+|    ├── reportWebVitals.js
+|    ├── setupTests.js
+|    └── utils
+|        ├── LoginContext.js
+|        └── ProtectedRoute.js
+├── .gitignore
+├── package-lock.json
+└── package.json
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+```
+## Application View
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+* `/` Route
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    ![](https://saima422.github.io/Image-JSON-Data-Repo/login-register-images/default-route.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+* `/register` Route
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+    ![](https://saima422.github.io/Image-JSON-Data-Repo/login-register-images/register-route.png)
 
-## Learn More
+* `/login` Route
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    ![](https://saima422.github.io/Image-JSON-Data-Repo/login-register-images/login-route.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* `/home` Route
 
-### Code Splitting
+    ![](https://saima422.github.io/Image-JSON-Data-Repo/login-register-images/home-route.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+## Scope and Functionality
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+#### Features:
+* Form Validation 
+* Storing State throughout application using Context in React
+* Rendering of Components Dependent on LoggedIn state 
+* React Routing implemented throughtout the Application
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Referred Resources
+* [React](https://reactjs.org/docs/getting-started.html)
+* [Context React](https://reactjs.org/docs/context.html)
+* [React Routing](https://reactrouter.com/web/guides/quick-start)
 
-### Advanced Configuration
+## Contact
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+* Author - Saima Sayed 
+* [Connect on LinkedIn](https://www.linkedin.com/in/saima-sayed-6482481b9/)
+* [Project Resources (Frontend))](https://github.com/Saima422/Login-Register-React)
+* [Netlify Live Link](https://admiring-perlman-1cdede.netlify.app/)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
