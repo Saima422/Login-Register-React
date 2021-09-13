@@ -28,10 +28,6 @@ function App() {
               <Homepage />
             </ProtectedRoute>
 
-            {/* <Route exact path='/home'>
-              <Homepage />
-            </Route> */}
-
             <Route path='/register'>
               <Register />
             </Route>

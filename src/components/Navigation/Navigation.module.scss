@@ -4,7 +4,6 @@ header{
     top: 0; 
     display: flex;
     justify-content: space-around;
-    // background-color: #1F2235;
     background-color: #E3E3E3;
     align-items: center;
     position: absolute;
@@ -13,20 +12,25 @@ header{
 
 .container{
     width:100%;
-    // background-color: #1F2235;
     background-color: #E3E3E3;
     display: flex;
     justify-content: flex-end;
 }
 
 .hidden{
-    display: none;    
-}
+    display: none;  
+    width: 30px;
 
-// .hidden > i{
-//     color: white;
-//     margin-left: -50px;
-// }
+    img{
+        width: 100%;
+        height: 100%;
+    }
+    
+    @media (max-width: 650px) {
+        display: unset;
+        margin-right: 20px;
+    }
+}
 
 .navLogo{
     margin: 5px 5px 5px 5px ;
@@ -39,6 +43,14 @@ header{
     align-items: center;
     justify-content: space-evenly;
     width: 35vw;
+
+    @media (max-width: 900px) {
+        width: 50vw;
+    }
+
+    @media (max-width: 650px) {
+        display: none;
+    }
 }
 
 .navItem{
@@ -53,18 +65,3 @@ header{
     transition: color .5s linear;
 }
 
-// .navLink:hover{
-//     color: #E84B53;
-// }
-
-.cta{
-    border: 2px solid #E84B53;
-    padding: 5px 20px 5px 20px;
-    border-radius: 20px;
-    transition: background-color 1s ease;
-}
-
-.cta:hover{
-    background-color: #E84B53;
-    color:white;
-}

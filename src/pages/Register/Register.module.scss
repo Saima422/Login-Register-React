@@ -3,7 +3,6 @@
     width: 500px;
     margin-top: 30px;
     height: 80%;
-    // border: 10px solid #2C394B;
     background-color: #F0F0F0;
     border-radius: 15px;
     padding: 8px;
@@ -11,6 +10,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: 550px) {
+        width: 90%;
+    }
 
     input{
         margin-bottom: 15px;
@@ -20,6 +23,10 @@
         color: black;
         border: 3px solid #E3E3E3;
         border-radius: 5px;
+
+        @media (max-width: 550px) {
+            width: 80%;
+        }
     }
 
     label{
